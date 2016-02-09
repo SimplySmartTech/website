@@ -1,2 +1,153 @@
-= render 'header'
+=render "header"                  
+section#map.ls
+section.ls.ms.columns_padding_25.section_padding_top_100.section_padding_bottom_100
+  .container
+    .row
+      .col-md-8.to_animate[data-animation="scaleAppear"]
+        h3.module-header
+          | Contact Form
+        form.contact-form.columns_padding_5[method="post" action="/"]
+          .col-sm-6
+            p.contact-form-name
+              label[for="name"]
+                | Full Name 
+                span.required
+                  | *
+              input#name.form-control[type="text" aria-required="true" size="30" value="" name="name" placeholder="Full Name"]
+          .col-sm-6
+            p.contact-form-subject
+              label[for="subject"]
+                | Subject
+                span.required
+                  | *
+              input#subject.form-control[type="text" aria-required="true" size="30" value="" name="subject" placeholder="Subject"]
+          .col-sm-6
+            p.contact-form-phone
+              label[for="phone"]
+                | Phone
+                span.required
+                  | *
+              input#phone.form-control[type="text" aria-required="true" size="30" value="" name="phone" placeholder="Phone number"]
+          .col-sm-6
+            p.contact-form-email
+              label[for="email"]
+                | Email address
+                span.required
+                  | *
+              input#email.form-control[type="email" aria-required="true" size="30" value="" name="email" placeholder="Email"]
+          .col-sm-12
+            p.contact-form-message
+              label[for="message"]
+                | Message
+              textarea#message.form-control[aria-required="true" rows="6" cols="45" name="message" placeholder="Message"]
+          .col-sm-12
+            p.contact-form-submit.topmargin_30
+              button#contact_form_submit.theme_button.wide_button.color1[type="submit" name="contact_submit"]
+                | Send Message
+              button#contact_form_reset.theme_button.wide_button[type="reset" name="contact_reset"]
+                | Clear Form
+      .col-md-4.to_animate[data-animation="scaleAppear"]
+        .with_background.page-meta
+          .media
+            .media-left
+              i.rt-icon2-shop.highlight.fontsize_18
+            .media-body
+              h5.media-heading.grey
+                | Postal Address:
+              | A13/14 Sunflower Building, 5th Floor, Survey No. 77/1, Mahalunge Baner Road, Baner, Pune - 411 045
+          .media
+            .media-left
+              i.rt-icon2-phone5.highlight.fontsize_18
+            .media-body
+              h5.media-heading.grey
+                | Phone:
+              |  8(800) 123-12345 
+          .media
+            .media-left
+              i.rt-icon2-stack4.highlight.fontsize_18
+            .media-body
+              h5.media-heading.grey
+                | Fax:
+              |  8(800) 123-12345 
+          .media
+            .media-left
+              i.rt-icon2-mail.highlight.fontsize_18
+            .media-body
+              h5.media-heading.grey
+                | Email:
+              |  info@simplysmart.tech 
+footer.page_footer.ds.ms.section_padding_top_65.section_padding_bottom_50
+  .container
+    .row
+      .col-md-3.col-sm-6.to_animate[data-animation="scaleAppear"]
+        .widget.widget_text
+          p
+            = image_tag "logo_bottom.png"
+          p
+            | A13/14 Sunflower Building, 5th Floor, 
+            | Survey No. 77/1, Mahalunge Baner Road,  
+            | Baner, Pune - 411 045,
+          p
+            | info@simplysmart.tech
+          p
+            | www.simplysmart.tech
+      .col-md-3.col-sm-6.to_animate[data-animation="scaleAppear"]
+        .widget.widget_nav_menu.greylinks
+          h3.widget-title
+            | Quick Links
+          div
+            ul.menu
+              li
+                a[href="#"]
+                  | Cart
+              li
+                a[href="#"]
+                  | Checkout
+              li
+                a[href="#"]
+                  | My account
+              li
+                a[href="#"]
+                  | Wishlist
+      .col-md-3.col-sm-6.to_animate[data-animation="scaleAppear"]
+        .widget.widget_nav_menu.greylinks
+          h3.widget-title
+            | Customer Care
+          div
+            ul.menu
+              li
+                a[href="#"]
+                  | Customer service
+              li
+                a[href="#"]
+                  | Track my order
+              li
+                a[href="#"]
+                  | Shipping&delivery
+              li
+                a[href="#"]
+                  | Contact us
+      .col-md-3.col-sm-6.to_animate[data-animation="scaleAppear"]
+        .widget.widget_mailchimp
+          h3.widget-title
+            | Newsletter Signup
+          p
+            | Subscribe to our latest news to be updated, we promise not to spam!
+          form.signup.form-inline[action="/" method="get"]
+            .form-group
+              input.mailchimp_email.form-control[name="email" type="email" placeholder="your@email.com"]
+            button.theme_button[type="submit"]
+              | Send
+            .response
 
+script[type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"]
+
+javascript:
+  var lat; 
+  var lng; 
+  var map; 
+  var styles = [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#46bcec"},{"visibility":"on"}]}]; 
+ 
+ jQuery.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address=A13/14 Sunflower Building, 5th Floor, Baner Road, Baner&sensor=false', function(data) { lat = data.results[0].geometry.location.lat; lng = data.results[0].geometry.location.lng; }).complete(function(){ dxmapLoadMap(); }); function attachSecretMessage(marker, message) { var infowindow = new google.maps.InfoWindow( { content: message }); google.maps.event.addListener(marker, 'click', function() { infowindow.open(map,marker); }); } window.dxmapLoadMap = function() { var center = new google.maps.LatLng(lat, lng); var settings = { mapTypeId: google.maps.MapTypeId.ROADMAP, zoom: 16, draggable: false, scrollwheel: false, center: center, styles: styles }; map = new google.maps.Map(document.getElementById('map'), settings); var marker = new google.maps.Marker({ position: center, title: 'Map title', map: map }); marker.setTitle('Map title'.toString()); 
+ 
+ attachSecretMessage(marker, '<h3>SimplySmart Technology Pvt Ltd</h3>'); } 
