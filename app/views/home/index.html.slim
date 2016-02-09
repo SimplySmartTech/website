@@ -1,0 +1,97 @@
+= render 'main_slider'
+= render 'header'
+section.ls.ms.section_padding_top_100.section_padding_bottom_100
+  .container
+    .row
+      .col-sm-6
+        p.entry-excerpt
+          |  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem non optio placeat libero voluptate, quas quis nostrum voluptates consequuntur cumque quasi. 
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam mollitia necessitatibus reprehenderit excepturi dignissimos, molestias doloremque molestiae inventore, error quos? Quia quod quibusdam optio, numquam soluta nemo rerum aut possimus.
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro soluta minima vero, perspiciatis, error laborum quas omnis voluptas quos nemo eos velit blanditiis? Officiis delectus, eos quibusdam quam, aliquid saepe.
+      .col-sm-6
+        .row
+          .col-sm-6
+            .teaser.text-center.with_background
+              h3.counter.highlight[data-from="0" data-to="2004" data-speed="1800"]
+                | 0
+              p
+                | Founded
+          .col-sm-6
+            .teaser.text-center.with_background
+              h3.highlight.counter-wrap
+                span.counter[data-from="0" data-to="98" data-speed="2500"]
+                  | 0
+                span.counter-add
+                  | %
+              p
+                | Happy Clients
+        .row
+          .col-sm-6
+            .teaser.text-center.with_background
+              h3.counter.highlight[data-from="0" data-to="325" data-speed="2100"]
+                | 0
+              p
+                | Savings / Month
+          .col-sm-6
+            .teaser.text-center.with_background
+              h3.highlight.counter-wrap
+                span.counter[data-from="0" data-to="4" data-speed="2500"]
+                  | 0
+                span.counter-add
+                  | .95
+              p
+                | Average Rating
+section.ls.section_padding_top_40.section_padding_bottom_15
+  .container
+    .row
+      .col-sm-4
+        .teaser.text-center
+          .teaser_icon.highlight.size_normal
+            i.rt-icon2-location2
+          h3
+            | Address
+          p
+            | Barker st. 567, Los Angeles, CA, US
+      .col-sm-4
+        .teaser.text-center
+          .teaser_icon.highlight.size_normal
+            i.rt-icon2-phone5
+          h3
+            | Phone
+          p
+            | 8 (800) 168-2159, 8 (800) 156-5462
+      .col-sm-4
+        .teaser.text-center
+          .teaser_icon.highlight.size_normal
+            i.rt-icon2-mail
+          h3
+            | Email
+          p
+            | info@company.com
+section.ds.ms.section_padding_top_75.section_padding_bottom_75
+  .container
+    .row
+      .col-sm-12.text-center
+        p.big.grey
+          |  Wanna be Updated? 
+        h2.section_header.highlight
+          |  Subscribe to our Newsletter 
+      .col-md-4.col-md-push-4.col-sm-6.col-sm-push-3
+        .widget.widget_mailchimp
+          form.signup.form-inline[action="/" method="get"]
+            .form-group
+              input.mailchimp_email.form-control[name="email" type="email" placeholder="your@email.com"]
+            button.theme_button[type="submit"]
+              | Send
+            .response
+section.ls.page_copyright.section_padding_top_50.section_padding_bottom_50
+  .container
+    .row
+      .col-sm-12.text-center
+        = image_tag "logo_bottom.png"
+        p
+          | © Solar 2015 | Created with 
+          i.rt-icon2-heart.highlight
+          |  by MWTemplates
