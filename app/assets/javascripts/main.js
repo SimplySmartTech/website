@@ -559,7 +559,7 @@ function windowLoadInit() {
 	var $header = jQuery('.page_header').first();
 	if ($header.length) {
 		var headerHeight = $header.outerHeight();
-		$header.wrap('<div class="page_header_wrapper"></div>').parent().css({height: "80px"}); //wrap header for smooth stick and unstick
+		$header.wrap('<div class="page_header_wrapper"></div>').parent().css({height: "86px"}); //wrap header for smooth stick and unstick
 
 			//get offset
 		var headerOffset = 0;
