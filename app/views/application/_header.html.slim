@@ -17,7 +17,7 @@ header.page_header.header_white.floating_logo.columns_padding_0.table_section
             li
               = link_to "Solutions", "#" 
               ul
-                - ['township', 'residential_society', 'commercial_building', 'hostel', 'affordable_housing', 'slum_redevelopment'].each do |cat|
+                - ['township', 'residential_society', 'commercial_building', 'hostel', 'affordable_housing'].each do |cat|
                   li= link_to cat.titleize, solution_path(cat)
             li= link_to "Smart City", smart_city_path 
             li

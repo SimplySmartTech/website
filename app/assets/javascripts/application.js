@@ -14,3 +14,4 @@
 //= require jquery_ujs
 //= require compressed
 //= require main
+//= require home
