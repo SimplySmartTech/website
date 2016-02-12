@@ -16,3 +16,7 @@
  *= require 'fonts'
  *= require_self
  */
+
+#features .teaser {
+  min-height: 325px; 
+}
