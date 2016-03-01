@@ -4,11 +4,11 @@
 */
 @font-face {
     font-family: 'rt-icons-2';
-    src:url('/assets/rt-icons-2.eot?wz19bt');
-    src:url('/assets/rt-icons-2.eot?#iefixwz19bt') format('embedded-opentype'),
-        url('/assets/rt-icons-2.ttf?wz19bt') format('truetype'),
-        url('/assets/rt-icons-2.woff?wz19bt') format('woff'),
-        url('/assets/rt-icons-2.svg?wz19bt#rt-icons-2') format('svg');
+    src:url(font-path('rt-icons-2.eot?wz19bt'));
+    src:url(font-path('rt-icons-2.eot?#iefixwz19bt')) format('embedded-opentype'),
+        url(font-path('rt-icons-2.ttf?wz19bt')) format('truetype'),
+        url(font-path('rt-icons-2.woff?wz19bt')) format('woff'),
+        url(font-path('rt-icons-2.svg?wz19bt#rt-icons-2')) format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -753,12 +753,12 @@
 */
 @font-face {
     font-family: 'socicon';
-    src: url('/assets/socicon.eot');
-    src: url('/assets/socicon.eot?#iefix') format('embedded-opentype'),
-         url('/assets/socicon.woff') format('woff'),
-         url('/assets/socicon.woff2') format('woff2'),
-         url('/assets/socicon.ttf') format('truetype'),
-         url('/assets/socicon.svg#sociconregular') format('svg');
+    src: url(font-path('socicon.eot'));
+    src: url(font-path('socicon.eot?#iefix')) format('embedded-opentype'),
+         url(font-path('socicon.woff')) format('woff'),
+         url(font-path('socicon.woff2')) format('woff2'),
+         url(font-path('socicon.ttf')) format('truetype'),
+         url(font-path('socicon.svg#sociconregular')) format('svg');
     font-weight: normal;
     font-style: normal;
     text-transform: initial;
@@ -855,11 +855,11 @@
 /*** fontello arrow icons ***/
 @font-face {
   font-family: 'fontello';
-  src: url('/assets/fontello.eot?81703720');
-  src: url('/assets/fontello.eot?81703720#iefix') format('embedded-opentype'),
-       url('/assets/fontello.woff?81703720') format('woff'),
-       url('/assets/fontello.ttf?81703720') format('truetype'),
-       url('/assets/fontello.svg?81703720#fontello') format('svg');
+  src: url(font-path('fontello.eot?81703720'));
+  src: url(font-path('fontello.eot?81703720#iefix')) format('embedded-opentype'),
+       url(font-path('fontello.woff?81703720')) format('woff'),
+       url(font-path('fontello.ttf?81703720')) format('truetype'),
+       url(font-path('fontello.svg?81703720#fontello')) format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -999,11 +999,11 @@
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('/assets/fontawesome-webfont.eot?v=4.2.0');
-  src: url('/assets/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'), 
-  url('/assets/fontawesome-webfont.woff?v=4.2.0') format('woff'), 
-  url('/assets/fontawesome-webfont.ttf?v=4.2.0') format('truetype'), 
-  url('/assets/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');
+  src: url(font-path('fontawesome-webfont.eot?v=4.2.0'));
+  src: url(font-path('fontawesome-webfont.eot?#iefix&v=4.2.0')) format('embedded-opentype'), 
+  url(font-path('fontawesome-webfont.woff?v=4.2.0')) format('woff'), 
+  url(font-path('fontawesome-webfont.ttf?v=4.2.0')) format('truetype'), 
+  url(font-path('fontawesome-webfont.svg?v=4.2.0#fontawesomeregular')) format('svg');
   font-weight: normal;
   font-style: normal;
 }
