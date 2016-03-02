@@ -6,7 +6,7 @@ section.ls.ms.columns_padding_25.section_padding_top_100.section_padding_bottom_
       .col-md-8.to_animate[data-animation="scaleAppear"]
         h3.module-header
           | Contact Form
-        form.contact-form.columns_padding_5[method="post" action="/"]
+        = form_for :enquiry, url: enquiry_path, html: {class: "contact-form columns_padding_5"} do  
           .col-sm-6
             p.contact-form-name
               label[for="name"]
@@ -76,70 +76,8 @@ section.ls.ms.columns_padding_25.section_padding_top_100.section_padding_bottom_
               h5.media-heading.grey
                 | Email:
               |  info@simplysmart.tech 
-footer.page_footer.ds.ms.section_padding_top_65.section_padding_bottom_50
-  .container
-    .row
-      .col-md-3.col-sm-6.to_animate[data-animation="scaleAppear"]
-        .widget.widget_text
-          p
-            = image_tag "logo_bottom.png"
-          p
-            | A13/14 Sunflower Building, 5th Floor, 
-            | Survey No. 77/1, Mahalunge Baner Road,  
-            | Baner, Pune - 411 045,
-          p
-            | info@simplysmart.tech
-          p
-            | www.simplysmart.tech
-      .col-md-3.col-sm-6.to_animate[data-animation="scaleAppear"]
-        .widget.widget_nav_menu.greylinks
-          h3.widget-title
-            | Quick Links
-          div
-            ul.menu
-              li
-                a[href="#"]
-                  | Cart
-              li
-                a[href="#"]
-                  | Checkout
-              li
-                a[href="#"]
-                  | My account
-              li
-                a[href="#"]
-                  | Wishlist
-      .col-md-3.col-sm-6.to_animate[data-animation="scaleAppear"]
-        .widget.widget_nav_menu.greylinks
-          h3.widget-title
-            | Customer Care
-          div
-            ul.menu
-              li
-                a[href="#"]
-                  | Customer service
-              li
-                a[href="#"]
-                  | Track my order
-              li
-                a[href="#"]
-                  | Shipping&delivery
-              li
-                a[href="#"]
-                  | Contact us
-      .col-md-3.col-sm-6.to_animate[data-animation="scaleAppear"]
-        .widget.widget_mailchimp
-          h3.widget-title
-            | Newsletter Signup
-          p
-            | Subscribe to our latest news to be updated, we promise not to spam!
-          form.signup.form-inline[action="/" method="get"]
-            .form-group
-              input.mailchimp_email.form-control[name="email" type="email" placeholder="your@email.com"]
-            button.theme_button[type="submit"]
-              | Send
-            .response
 
+= render 'footer'
 script[type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"]
 
 javascript:

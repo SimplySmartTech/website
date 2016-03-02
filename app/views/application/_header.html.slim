@@ -9,7 +9,7 @@ header.page_header.header_white.floating_logo.columns_padding_0.table_section
             | 8(800)168-2159
           br
           |  support@company.com 
-      .col-md-7.col-lg-6.text-center
+      .col-md-8.col-lg-8.text-center
         nav.mainmenu_wrapper
           ul.mainmenu.nav.sf-menu
             li.active
@@ -21,20 +21,23 @@ header.page_header.header_white.floating_logo.columns_padding_0.table_section
                   li= link_to cat.titleize, solution_path(cat)
             li= link_to "Smart City", smart_city_path 
             li
-              = link_to "Case Studies", case_studies_path 
-              ul
-                - ['chototel', 'sheltrex'].each do |company|
-                  li= link_to company.titleize, case_studies_path("#{company}")
+              = link_to "Clients", case_studies_path 
+              /
+                ul
+                  - ['chototel', 'sheltrex'].each do |company|
+                    li= link_to company.titleize, case_studies_path("#{company}")
             li
-              = link_to "About Us", "#" 
-              ul
-                li=link_to "Management Team", management_team_path
-                li=link_to "Investors", investors_path 
+              = link_to "About Us", management_team_path 
+              /
+                ul
+                  li=link_to "Management Team", management_team_path
+                  li=link_to "Investors", investors_path 
             li=link_to "Contact Us", contact_us_path 
-      .col-md-2.col-lg-3.text-right
+      .col-md-1.col-lg-1.text-right
         span.toggle_menu
           span
-        span.visible-lg-inline-block
-          a.social-icon.soc-facebook href="#" 
-          a.social-icon.soc-twitter href="#" 
-          a.social-icon.soc-google href="#" 
+        /  
+          span.visible-lg-inline-block
+            a.social-icon.soc-facebook href="#" 
+            a.social-icon.soc-twitter href="#" 
+            a.social-icon.soc-google href="#" 

@@ -1,1 +1,24 @@
 = render 'header'
+section.ls.ms.section_padding_top_50.section_padding_bottom_50 style="min-height:400px;"
+  .container
+    .row
+      .col-sm-12.text-center
+        .col-sm-4
+          .person.text-center
+            = image_tag "gautam.png"
+          .person-info.text-center
+            h4 Gautam Rege
+            p.text-muted CEO
+        .col-sm-4  
+          .person.text-center
+            = image_tag "sethu.png"
+          .person-info.text-center
+            h4 Sethupathi Asokan 
+            p.text-muted CTO
+        .col-sm-4  
+          .person.text-center
+            = image_tag "avadhoot.png"
+          .person-info.text-center
+            h4 Avadhoot Bhatye 
+            p.text-muted COO
+= render 'footer'

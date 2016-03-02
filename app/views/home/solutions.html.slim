@@ -297,7 +297,7 @@ section.ls.ms.section_padding_top_100.section_padding_bottom_100
                   | Total electricity usage of the township in summer!
                 li
                   | Total water wastage in each month.
-
+= render 'footer'
 javascript:
   var features = #{raw FEATURES.to_json}
   var category = "#{params[:for]}"

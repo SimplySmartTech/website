@@ -1,4 +1,3 @@
-= render 'main_slider'
 = render 'header'
 section.ls.ms.section_padding_top_100.section_padding_bottom_100
   .container
@@ -86,29 +85,22 @@ section.ls.section_padding_top_40.section_padding_bottom_15
           h3
             | Email
           p
-            | info@simplysmart.tech
-section.ds.ms.section_padding_top_75.section_padding_bottom_75
-  .container
-    .row
-      .col-sm-12.text-center
-        p.big.grey
-          |  Wanna be Updated? 
-        h2.section_header.highlight
-          |  Subscribe to our Newsletter 
-      .col-md-4.col-md-push-4.col-sm-6.col-sm-push-3
-        .widget.widget_mailchimp
-          form.signup.form-inline[action="/" method="get"]
-            .form-group
-              input.mailchimp_email.form-control[name="email" type="email" placeholder="your@email.com"]
-            button.theme_button[type="submit"]
-              | Send
-            .response
-section.ls.page_copyright.section_padding_top_50.section_padding_bottom_50
-  .container
-    .row
-      .col-sm-12.text-center
-        = image_tag "logo_bottom.png"
-        p
-          | © Solar 2015 | Created with 
-          i.rt-icon2-heart.highlight
-          |  by MWTemplates
+            = mail_to "info@simplysmart.tech"
+/            
+  section.ds.ms.section_padding_top_75.section_padding_bottom_75
+    .container
+      .row
+        .col-sm-12.text-center
+          p.big.grey
+            |  Wanna be Updated? 
+          h2.section_header.highlight
+            |  Subscribe to our Newsletter 
+        .col-md-4.col-md-push-4.col-sm-6.col-sm-push-3
+          .widget.widget_mailchimp
+            form.signup.form-inline[action="/" method="get"]
+              .form-group
+                input.mailchimp_email.form-control[name="email" type="email" placeholder="your@email.com"]
+              button.theme_button[type="submit"]
+                | Send
+              .response
+= render 'footer'              
