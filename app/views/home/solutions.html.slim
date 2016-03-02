@@ -5,7 +5,12 @@ section.ls.ms.section_padding_top_100.section_padding_bottom_100
       .col-sm-12.text-center
         p.big.grey
           |  Making things Simple and Smart
-        h2.section_header.highlight= params[:for].titleize
+        - if params[:for] == "affordable_housing"
+          h2.section_header.highlight
+            = params[:for].titleize
+            | &trade;
+        - else
+          h2.section_header.highlight= params[:for].titleize
     .row
       .col-sm-6#water_meter
         .teaser.media.with_background
