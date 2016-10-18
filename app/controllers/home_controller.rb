@@ -1,4 +1,6 @@
 class HomeController < ApplicationController
+  caches_page :solutions, :smart_city, :management_team, :investors, :contact_us, :index, :case_studies 
+
   def index
   end
 
