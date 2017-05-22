@@ -1,7 +1,16 @@
-footer.page_footer.ds.ms.section_padding_top_65.section_padding_bottom_50
+footer.page_footer.ds.ms
   .container
     .row
-      .col-md-12.col-sm-12.to_animate[data-animation="scaleAppear"]
-        .widget.widget_text.text-center
+      .col-md-6.col-sm-6.to_animate[data-animation="scaleAppear"]
+        .widget.widget_text
           p
             | Copyright © 2016 SimplySmart Technology Private Limited 
+      .col-md-6.col-sm-6.to_animate[data-animation="scaleAppear"]
+        .widget.widget_text.pull-right
+          = link_to "Privacy Policy", privacy_policy_path 
+          = " | "
+          = link_to "About Us", management_team_path 
+          = " | "
+          = link_to "Contact Us", contact_us_path
+
+            

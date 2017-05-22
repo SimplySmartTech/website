@@ -223,11 +223,6 @@ function documentReadyInit() {
 		});
 	}
 
-	//toTop
-	if (jQuery().UItoTop) {
-        jQuery().UItoTop({ easingType: 'easeOutQuart' });
-    }
-
 	//parallax
 	if (jQuery().parallax) {
 		jQuery('.parallax').parallax("50%", 0.01);
