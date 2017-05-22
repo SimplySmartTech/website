@@ -90,4 +90,6 @@ Rails.application.configure do
     :authentication => :plain,
     :enable_starttls_auto => true
   }
+
+  config.action_controller.page_cache_directory = "#{Rails.root.to_s}/public"
 end
