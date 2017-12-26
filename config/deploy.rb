@@ -10,13 +10,13 @@ require 'mina/rvm'    # for rvm support. (http://rvm.io)
 #   repository   - Git repo to clone from. (needed by mina/git)
 #   branch       - Branch name to deploy. (needed by mina/git)
 
-set :domain, '52.6.154.188'
+set :domain, '13.126.244.139'
 set :deploy_to, '/home/ubuntu/website'
 set :repository, 'git@github.com:SimplySmartTech/website.git'
 set :branch, ENV['branch'] || 'master'
-set :identity_file, "#{ENV['HOME']}/.ssh/sheltrex-dev.pem"
 set :rails_env, :production
 set :user, 'ubuntu'
+set :rvm_path, "/usr/local/rvm/scripts/rvm"
 
 # For system-wide RVM install.
 #   set :rvm_path, '/usr/local/rvm/bin/rvm'
@@ -38,7 +38,7 @@ task :environment do
   # invoke :'rbenv:load'
 
   # For those using RVM, use this to load an RVM version@gemset.
-  invoke :'rvm:use[ruby-2.2.0]'
+  invoke :'rvm:use[ruby-2.4.1]'
 end
 
 # Put any custom mkdir's in here for when `mina setup` is ran.
