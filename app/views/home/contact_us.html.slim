@@ -1,5 +1,4 @@
 =render "header"                  
-section#map.ls
 section.ls.ms.columns_padding_25.section_padding_top_100.section_padding_bottom_100
   .container
     .row
@@ -61,31 +60,15 @@ section.ls.ms.columns_padding_25.section_padding_top_100.section_padding_bottom_
             .media-body
               h5.media-heading.grey
                 | Phone:
-              |  8(800) 123-12345 
-          .media
-            .media-left
-              i.rt-icon2-stack4.highlight.fontsize_18
-            .media-body
-              h5.media-heading.grey
-                | Fax:
-              |  8(800) 123-12345 
+              |  +919916784858 
           .media
             .media-left
               i.rt-icon2-mail.highlight.fontsize_18
             .media-body
               h5.media-heading.grey
                 | Email:
-              |  info@simplysmart.tech 
+              = mail_to "info@simplysmart.tech"
 
 = render 'footer'
-script[type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"]
-
 javascript:
-  var lat; 
-  var lng; 
-  var map; 
   var styles = [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#46bcec"},{"visibility":"on"}]}]; 
- 
- jQuery.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address=A13/14 Sunflower Building, 5th Floor, Baner Road, Baner&sensor=false', function(data) { lat = data.results[0].geometry.location.lat; lng = data.results[0].geometry.location.lng; }).complete(function(){ dxmapLoadMap(); }); function attachSecretMessage(marker, message) { var infowindow = new google.maps.InfoWindow( { content: message }); google.maps.event.addListener(marker, 'click', function() { infowindow.open(map,marker); }); } window.dxmapLoadMap = function() { var center = new google.maps.LatLng(lat, lng); var settings = { mapTypeId: google.maps.MapTypeId.ROADMAP, zoom: 16, draggable: false, scrollwheel: false, center: center, styles: styles }; map = new google.maps.Map(document.getElementById('map'), settings); var marker = new google.maps.Marker({ position: center, title: 'Map title', map: map }); marker.setTitle('Map title'.toString()); 
- 
- attachSecretMessage(marker, '<h3>SimplySmart Technology Pvt Ltd</h3>'); } 
