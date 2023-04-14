@@ -1,6 +1,5 @@
 # Load the Rails application.
-require File.expand_path('../application', __FILE__)
-require "#{Rails.root.join("config/initializers/email")}"
+require_relative "application"
 
 # Initialize the Rails application.
 Rails.application.initialize!
